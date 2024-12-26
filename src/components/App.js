@@ -9,7 +9,9 @@ const App = () => {
         {/* Do not remove the main div */}
         <label for="name">Enter Your Name:</label><br></br>
         <input type="text" id="name" value={name} onChange={(e)=> setName(e.target.value)}/>
-        <p>{`Hello, ${name}!`}</p>
+        {name ? (
+              <p>Hello, {name}!</p>
+            ) : (" ")}
     </div>
   )
 }
